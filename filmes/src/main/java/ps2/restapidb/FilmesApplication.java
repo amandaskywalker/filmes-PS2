@@ -1,4 +1,4 @@
-package br.mackenzie.ps2.filmes;
+package ps2.restapidb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

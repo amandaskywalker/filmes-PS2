@@ -1,16 +1,25 @@
 package ps2.restapidb;
 
-import javax.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 
 @Entity
 @Table(name="filmes")
 
 public class Filme {
+    @Id @GeneratedValue
     private Long id;
     private String titulo;
     private String diretor;
     private int anoLancamento;
     private String genero;
+
+    public Filme() {
+        super();
+    }
 
     public Long getId() {
         return id;
@@ -21,7 +30,7 @@ public class Filme {
     }
 
     public String getTitulo() {
-        retur titulo;
+        return titulo;
     }
 
     public void setTitulo(String titulo) {
