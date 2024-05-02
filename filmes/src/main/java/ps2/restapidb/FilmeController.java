@@ -20,28 +20,32 @@ public class FilmeController {
 	@Autowired
 	private FilmeRepo filmeRepo;
 
+	public FilmeController(){
+		
+	}
+
 	@GetMapping("/filmes")
 	Iterable<Filme> getFilmes() {
-		return FilmeRepo.findAll();
+		return filmeRepo.findAll();
 	}
 
 	@GetMapping("/filmes/{id}")
 	Optional<Filme> getFilme(@PathVariable long id) {
-		return FilmeRepo.findById(id);
+		return filmeRepo.findById(id);
 	}
 
 	@PostMapping("/create/filmes")
 	Filme createFilme(@RequestBody Filme t) {
-		Filme createdFilme = FilmeRepo.save(t);
+		Filme createdFilme = filmeRepo.save(t);
 		return createdFilme;
 	}
 
 	@PutMapping("/update/filmes/{FilmeId}")
 	Optional<Filme> updateFilme(@RequestBody Filme FilmeRequest, @PathVariable long FilmeId) {
-		Optional<Filme> opt = FilmeRepo.findById(FilmeId);
+		Optional<Filme> opt = filmeRepo.findById(FilmeId);
 		if (opt.isPresent()) {
 			if (FilmeRequest.getId() == FilmeId) {
-				FilmeRepo.save(FilmeRequest);
+				filmeRepo.save(FilmeRequest);
 				return opt;
 			}
 		}
@@ -51,7 +55,7 @@ public class FilmeController {
 
 	@DeleteMapping("/delete/filmes/{id}")
 	void deleteFilme(@PathVariable long id) {
-		FilmeRepo.deleteById(id);
+		filmeRepo.deleteById(id);
 	}
 
 }
