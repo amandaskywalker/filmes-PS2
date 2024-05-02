@@ -17,6 +17,7 @@ public class Filme {
     private int anoLancamento;
     private String genero;
 
+    
     public Filme() {
         super();
     }
@@ -49,7 +50,7 @@ public class Filme {
         return anoLancamento;
     }
 
-    public void getAnoLancamento(int anoLancamento) {
+    public void setAnoLancamento(int anoLancamento) {
         this.anoLancamento = anoLancamento;
     }
 
