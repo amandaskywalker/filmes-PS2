@@ -43,12 +43,12 @@ public class AtorController {
         }
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public Ator createAtor(@RequestBody Ator t) {
         return atorRepo.save(t);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<Ator> updateAtor(@RequestBody Ator atorRequest, @PathVariable long id) {
         Optional<Ator> opt = atorRepo.findById(id);
         if (opt.isPresent()) {
@@ -65,7 +65,7 @@ public class AtorController {
         }
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteAtor(@PathVariable long id) {
         Optional<Ator> opt = atorRepo.findById(id);
         if (opt.isPresent()) {

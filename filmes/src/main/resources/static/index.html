@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto PG2</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <div id="div-form">
+        <h1>PROJETO PG2</h1>
+        <button id="btn-filme">FILME</button>
+        <button id="btn-ator">ATOR</button>
+
+        <div id="filme" class="content">
+            <h2>FILME</h2>
+            <button onclick="listarFilmes()" id="btn-adicionar">Listar Filmes</button>
+            <br><br>
+            <form id="filme-form" onsubmit="adicionarFilme(event)">
+                <input type="text" id="filme-id" placeholder="ID (para atualizar/deletar)"><br>
+                <label for="filme-nome">NOME:</label>
+                <input type="text" id="filme-nome"><br>
+                <label for="filme-diretor">DIRETOR:</label>
+                <input type="text" id="filme-diretor"><br>
+                <label for="filme-ano-lancamento">ANO DE LANÇAMENTO:</label>
+                <input type="number" id="filme-ano-lancamento"><br>
+                <label for="filme-genero">GÊNERO:</label>
+                <input type="text" id="filme-genero"><br>
+                <button type="submit" id="btn-adicionar">Adicionar Filme</button>
+                <button type="button" onclick="atualizarFilme()" id="btn-adicionar">Atualizar Filme</button>
+                <button type="button" onclick="deletarFilme()" id="btn-adicionar">Deletar Filme</button>
+            </form>
+            <div id="filme-list"></div>
+        </div>
+
+        <div id="ator" class="content">
+            <h2>ATOR</h2>
+            <button onclick="listarAtores()" id="btn-adicionar">Listar Atores</button>
+            <br><br>
+            <form id="ator-form" onsubmit="adicionarAtor(event)">
+                <input type="text" id="ator-id" placeholder="ID (para atualizar/deletar)"><br>
+                <label for="ator-nome">NOME:</label>
+                <input type="text" id="ator-nome"><br>
+                <label for="ator-diretor">DIRETOR:</label>
+                <input type="text" id="ator-diretor"><br>
+                <label for="ator-ano-lancamento">ANO DE LANÇAMENTO:</label>
+                <input type="number" id="ator-ano-lancamento"><br>
+                <label for="ator-genero">GÊNERO:</label>
+                <input type="text" id="ator-genero"><br>
+                <button type="submit" id="btn-adicionar">Adicionar Ator</button>
+                <button type="button" onclick="atualizarAtor()" id="btn-adicionar">Atualizar Ator</button>
+                <button type="button" onclick="deletarAtor()" id="btn-adicionar">Deletar Ator</button>
+            </form>
+            <div id="ator-list"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
