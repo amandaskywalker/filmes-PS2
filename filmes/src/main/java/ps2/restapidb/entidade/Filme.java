@@ -1,4 +1,4 @@
-package ps2.restapidb;
+package ps2.restapidb.entidade;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

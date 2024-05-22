@@ -1,4 +1,4 @@
-package ps2.restapidb;
+package ps2.restapidb.controlador;
 
 import java.util.Optional;
 
@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
+
+import ps2.restapidb.entidade.Filme;
+import ps2.restapidb.repositorio.FilmeRepo;
 
 
 @RestController
