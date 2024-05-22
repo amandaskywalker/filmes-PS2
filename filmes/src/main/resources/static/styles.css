@@ -76,7 +76,7 @@ form label {
     font-weight: bold;
 }
 
-#filme-list, #ator-list {
+#cidade-list, #pais-list, #time-list, #filme-list, #ator-list {
     margin-top: 20px;
     background: #34495e;
     padding: 10px;
