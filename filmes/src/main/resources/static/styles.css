@@ -1,131 +1,90 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background-color: #2c3e50;
-    color: #ecf0f1;
+    color: white;
+    background-color: #1c1c1c;
     margin: 0;
     padding: 0;
-    height: 100vh;
 }
 
-#div-form {
-    background: #34495e;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#div-home, #div-form {
+    border: solid #008B8B;
     width: 90%;
-    max-width: 600px;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 400px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
 }
 
-h1, h2 {
-    color: #1abc9c;
-    margin-bottom: 20px;
-}
-
-.content {
-    display: none;
+h1 {
+    margin: 0;
+    padding: 0 0 20px 0;
+    color: #00FFFF;
 }
 
 button {
-    background-color: #1abc9c;
-    color: #ecf0f1;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    width: 70%;
+    max-width: 200px;
+    height: 40px;
+    background-color: #008B8B;
+    color: white;
     cursor: pointer;
-    margin: 5px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: none;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #16a085;
+    background-color: #005f5f;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+    align-items: center;
 }
 
-form input {
-    padding: 10px;
-    border: 1px solid #1abc9c;
-    border-radius: 5px;
-    background: #2c3e50;
-    color: #ecf0f1;
-}
-
-form input::placeholder {
-    color: #7f8c8d;
-}
-
-form label {
-    text-align: left;
-    margin-bottom: -5px;
-    font-weight: bold;
+form input, form label {
+    margin: 10px 0;
 }
 
 #filme-list, #ator-list {
     margin-top: 20px;
-    background: #34495e;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
     text-align: left;
 }
 
-.list-item {
-    background: #1abc9c;
-    color: #2c3e50;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    transition: background-color 0.3s;
-}
-
-.list-item:hover {
-    background: #16a085;
-}
-
 @media (min-width: 768px) {
-    #div-form {
+    #div-home, #div-form {
         width: 60%;
     }
 }
 
 @media (min-width: 1024px) {
-    #div-form {
+    #div-home, #div-form {
         width: 50%;
     }
 }
 
 @media (min-width: 1200px) {
-    #div-form {
+    #div-home, #div-form {
         width: 40%;
     }
 }
 
 @media (max-width: 767px) {
-    #div-form {
+    #div-home, #div-form {
         width: 100%;
         padding: 10px;
     }
 
     button {
         width: 100%;
-        margin: 10px 0;
     }
 }

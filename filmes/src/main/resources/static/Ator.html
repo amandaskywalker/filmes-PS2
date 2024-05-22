@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Ator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <div id="div-form">
+        <h1>Formulário de Ator</h1>
+        <button onclick="listarAtores()">Listar Atores</button>
+        <br><br>
+        <form id="ator-form" onsubmit="adicionarAtor(event)">
+            <input type="text" id="ator-id" placeholder="ID (para atualizar/deletar)"><br>
+            <label for="ator-nome">Nome:</label>
+            <input type="text" id="ator-nome"><br>
+            <label for="ator-genero">Gênero:</label>
+            <input type="text" id="ator-genero"><br>
+            <label for="ator-nascimento">Data de Nascimento:</label>
+            <input type="date" id="ator-nascimento"><br>
+            <button type="submit">Adicionar Ator</button>
+            <button type="button" onclick="atualizarAtor()">Atualizar Ator</button>
+            <button type="button" onclick="deletarAtor()">Deletar Ator</button>
+        </form>
+        <div id="ator-list"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
