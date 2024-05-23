@@ -1,18 +1,3 @@
-const showActorFormButton = document.getElementById('show-actor-form');
-const actorForm = document.getElementById('actor-form');
-const actorFormContent = document.getElementById('form-ator');
-
-showActorFormButton.addEventListener('click', () => {
-    actorForm.style.display = 'block';
-});
-
-// Oculta o formulário ao clicar fora dele
-document.addEventListener('click', (event) => {
-    if (!actorForm.contains(event.target) && event.target !== showActorFormButton) {
-        actorForm.style.display = 'none';
-    }
-});
-
 function listarFilmes() {
     fetch('/filmes')
         .then(response => response.json())
@@ -154,3 +139,16 @@ function deletarAtor() {
     })
     .catch(error => console.error('Erro ao deletar ator:', error));
 }
+
+const filmeForm = document.getElementById('filme');
+const atorForm = document.getElementById('ator');
+
+document.getElementById('btn-filme').addEventListener('click', () => {
+    filmeForm.style.display = 'block';
+    atorForm.style.display = 'none';
+});
+
+document.getElementById('btn-ator').addEventListener('click', () => {
+    filmeForm.style.display = 'none';
+    atorForm.style.display = 'block';
+});
