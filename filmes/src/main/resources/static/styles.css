@@ -1,83 +1,63 @@
-.content {
-    display: none;
-  }
-  
-  body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    text-align: center;
     justify-content: center;
     align-items: center;
-    color: white;
-    background-color: #C0C0C0;
-  }
-  
-  #filme-form, #ator-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #filme, #ator {
-    margin-top: 30px;
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #div-form {
-    border: solid #008B8B;
+    height: 100vh;
+}
+
+#div-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 400px;
-    background-color: #48D1CC;
-    height: auto;
-    min-height: 800px;
-    border-radius: 10px;
-    padding: 20px;
-  }
-  
-  .button {
-    width: 70%;
-    max-width: 200px;
-    height: 40px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
     background-color: #008B8B;
     color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-  
-  @media (min-width: 768px) {
-    #div-form {
-        width: 60%;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    #div-form {
-        width: 50%;
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    #div-form {
-        width: 40%;
-    }
-  }
-  
-  @media (max-width: 767px) {
+}
+
+.button:hover {
+    background-color: #005f5f;
+}
+
+@media (max-width: 768px) {
     #div-form {
         width: 100%;
-        min-height: auto;
         padding: 10px;
     }
-  
-    .button {
-        width: 100%;
-    }
-  }
-  
+}
+
