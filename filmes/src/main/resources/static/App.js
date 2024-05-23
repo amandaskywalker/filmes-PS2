@@ -1,3 +1,16 @@
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.content');
+    sections.forEach(section => section.style.display = 'none');
+    document.getElementById(sectionId).style.display = 'block';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSection('cidade');
+    document.getElementById('btn-cidade').addEventListener('click', () => showSection('filme'));
+    document.getElementById('btn-pais').addEventListener('click', () => showSection('ator'));
+    
+});
+
 function listarFilmes() {
     fetch('/filmes')
         .then(response => response.json())
@@ -140,15 +153,3 @@ function deletarAtor() {
     .catch(error => console.error('Erro ao deletar ator:', error));
 }
 
-const filmeForm = document.getElementById('filme');
-const atorForm = document.getElementById('ator');
-
-document.getElementById('btn-filme').addEventListener('click', () => {
-    filmeForm.style.display = 'block';
-    atorForm.style.display = 'none';
-});
-
-document.getElementById('btn-ator').addEventListener('click', () => {
-    filmeForm.style.display = 'none';
-    atorForm.style.display = 'block';
-});
